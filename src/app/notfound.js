@@ -14,6 +14,7 @@ const NotFound = {
     </main>
   `,
   controller: NotFoundController,
+  restricted: false,
 };
 
 export default NotFound;

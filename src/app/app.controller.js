@@ -1,12 +1,15 @@
 class AppController {
-  constructor() {
+  constructor(Authentication) {
     this.name = 'app';
+    this.auth = Authentication;
   }
   $onInit() {
-    console.log(this);
+    console.log(this.auth.getUserStatus());
   }
 }
 
-AppController.$inject = [];
+AppController.$inject = [
+  'Authentication',
+];
 
 export default AppController;

@@ -1,5 +1,12 @@
 import angular from 'angular';
+import Authentication from './authentication/authentication.service.module';
 
-const servicesModule = angular.module('app.services', []).name;
 
-export default servicesModule;
+const ServicesModule = angular.module(
+  'app.services',
+  [
+    Authentication,
+  ],
+).name;
+
+export default ServicesModule;

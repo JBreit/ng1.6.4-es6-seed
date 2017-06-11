@@ -3,14 +3,15 @@ import uiRouter from '@uirouter/angularjs';
 import aboutComponent from './about.component';
 
 const Config = ($stateProvider) => {
-  'ngInject';
-
   $stateProvider
     .state('about', {
       url: '/about',
       component: 'about',
+      restricted: false,
     });
 };
+
+Config.$inject = ['$stateProvider'];
 
 const aboutModule = angular.module('about', [uiRouter])
   .config(Config)
