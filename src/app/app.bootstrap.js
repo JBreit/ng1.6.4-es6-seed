@@ -1,6 +1,16 @@
 const onStartTransitionHandler = (transition) => {
   const authentication = transition.injector().get('Authentication');
 
+  const checkUserStatus = () => {
+    return (isAuthenticated) => {
+      if (!isAuthenticated) {
+        console.warn(isAuthenticated);
+        return transition.router.stateService.target('login');
+      }
+      console.log(isAuthenticated);
+    };
+  };
+
   authentication
     .getUserStatus()
     .then((isAuthenticated) => {

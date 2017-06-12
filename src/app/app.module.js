@@ -1,3 +1,5 @@
+/* global document */
+
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
 import Common from './common/common';
@@ -12,3 +14,8 @@ angular.module('app', [uiRouter, Common, Components, Services])
   .component('app', AppComponent)
   .config(Config)
   .run(Bootstrap);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log(event);
+  angular.bootstrap(document, ['app']);
+});
