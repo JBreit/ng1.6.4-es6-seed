@@ -3,10 +3,8 @@ const onStartTransitionHandler = (transition) => {
 
   const checkAuthentication = (isAuthenticated) => {
     if (!isAuthenticated) {
-      console.log(isAuthenticated);
       return transition.router.stateService.target('login');
     }
-    console.log(isAuthenticated);
   };
 
   const requestError = (err) => {
