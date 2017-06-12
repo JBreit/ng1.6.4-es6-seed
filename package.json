@@ -2,7 +2,7 @@
   "title": "NG1.6.4 ES6 Seed",
   "name": "ng1.6.4-es6-seed",
   "version": "1.0.0",
-  "description": "Angular 1.6.4 ECMAScript 2015-2017 Seed",
+  "description": "Angular v1.x.x -> v2.0 Migration preperation implementing components and Angular UI Router v1.0.",
   "main": "./src/app/app.js",
   "private": true,
   "scripts": {

@@ -16,9 +16,10 @@ const banner = `
 `;
 
 const dir = {
-  src: resolve('src'),
   app: resolve('src/app'),
+  e2e: resolve('e2e'),
   dist: resolve('dist'),
+  src: resolve('src'),
 };
 
 const styleBundle = new ExtractText(`style.css`);

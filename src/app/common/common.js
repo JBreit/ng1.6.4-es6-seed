@@ -1,5 +1,5 @@
 import angular from 'angular';
-import Masthead from './masthead/masthead'; 
+import Masthead from './masthead/masthead.module'; 
 import Navbar from './navbar/navbar.module';
 import Version from './version/version.module';
 

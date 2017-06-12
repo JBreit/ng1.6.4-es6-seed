@@ -1,6 +1,6 @@
 class NavbarController {
   constructor() {
-    this.name = '_n';
+    this.name = 'navbar';
     this.routes = [];
   }
   $onInit() {
