@@ -8,7 +8,7 @@ const handleError = ($injector) => {
     }]);
 };
 
-const Config = ($stateProvider, $urlRouterProvider, $locationProvider) => {
+const Routes = ($stateProvider, $urlRouterProvider, $locationProvider) => {
   'ngInject';
 
   $locationProvider
@@ -22,4 +22,4 @@ const Config = ($stateProvider, $urlRouterProvider, $locationProvider) => {
     .otherwise(handleError);
 };
 
-export default Config;
+export default Routes;
