@@ -20,8 +20,8 @@ Angular v1.x -> v2.0 Migration preperation implementing components and Angular U
 ### Challenges
 1. Decrease time to interactive within the 3-5 second range on mobile.
 
-Current bundle size: 6.2MB Transferred
-Time to Interactive: 13.62s-13.99s (4G - Regular)
+- Current bundle size: 6.2MB Transferred
+- Time to Interactive: 13.62s-13.99s (4G - Regular)
 
 [license-url]: LICENSE
 [license-image]: http://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
