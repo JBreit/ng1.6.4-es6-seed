@@ -1,10 +1,19 @@
 class AppController {
   constructor(Authentication) {
     this.name = 'app';
-    this.auth = Authentication;
+    this.authentication = Authentication;
   }
   $onInit() {
-    console.log(this.auth.getUserStatus());
+    console.log(this.authentication.getUserStatus());
+  }
+  login(username, password) {
+    // this.authentication.login(username, password);
+  }
+  logout() {
+    // this.authentication.logout();
+  }
+  register() {
+    // this.authentication.register();
   }
 }
 

@@ -11,17 +11,13 @@ const onStartTransitionHandler = (transition) => {
     console.error(err);
   };
 
-  authentication
-    .getUserStatus()
+  authentication.getUserStatus()
     .then(checkAuthentication)
     .catch(requestError);
 };
 
-const Bootstrap = ($rootScope, $state, $stateParams, $location, $transitions, Authentication) => {
+const Bootstrap = ($transitions, Authentication) => {
   'ngInject';
-
-  $rootScope.$state = $state;
-  $rootScope.$stateParams = $stateParams;
 
   $transitions
     .onStart({ to: '**' }, onStartTransitionHandler);

@@ -31,7 +31,19 @@ class Authentication {
     return false;
   }
   login(username, password) {
-    console.log(username, password);
+    const deferred = $q.deferred();
+
+    this.$http.post('/user/login', { username, password })
+      .then(getData)
+      .then((data) => {
+        if (data.status && data.status === true) {
+          deferred.resolve(data.status);
+        }
+        deferred.reject(data.status);
+      })
+      .catch(data => deferred.reject(data));
+
+    return deferred.promise;
   }
   register() {
     console.log(this);

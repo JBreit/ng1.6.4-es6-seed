@@ -1,12 +1,11 @@
 import template from './app.html';
-import AppController from './app.controller';
-
+import Controller from './app.controller';
 // import './app.scss';
 
 const appComponent = {
   bindings: {},
   template,
-  AppController,
+  Controller,
 };
 
 export default appComponent;
