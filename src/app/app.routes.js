@@ -1,11 +1,7 @@
 import NotFound from './notfound';
 
 const handleError = ($injector) => {
-  $injector
-    .invoke(['$state', ($state) => {
-      $state
-        .transitionTo('404', {}, false);
-    }]);
+  $injector.invoke(['$state', $state => $state.transitionTo('404', {}, false)]);
 };
 
 const Routes = ($stateProvider, $urlRouterProvider, $locationProvider) => {
