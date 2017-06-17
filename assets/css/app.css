@@ -17,7 +17,7 @@ body {
 
 body {
   /*font-size: 16;*/
-  background: #F7F7F7;
+  /*background: #F7F7F7;*/
   margin: 0 auto;
 }
 
@@ -187,6 +187,8 @@ progress:after {
 }
 
 .view { padding-top: 2.87rem; padding-left: 4.5em; }
+
+footer { border-top: 1px solid rgba(0, 0, 0, 0.07); padding-left: 4.5em; }
 
 @media only screen {
 

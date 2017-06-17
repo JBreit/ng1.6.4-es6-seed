@@ -5,10 +5,9 @@ const handleError = ($injector) => {
 };
 
 const Routes = ($stateProvider, $urlRouterProvider, $locationProvider) => {
-  'ngInject';
 
   $locationProvider
-    .html5Mode(false)
+    .html5Mode(true)
     .hashPrefix('!');
 
   $stateProvider
@@ -17,5 +16,11 @@ const Routes = ($stateProvider, $urlRouterProvider, $locationProvider) => {
   $urlRouterProvider
     .otherwise(handleError);
 };
+
+Routes.$inject = [
+  '$stateProvider',
+  '$urlRouterProvider',
+  '$locationProvider',
+];
 
 export default Routes;

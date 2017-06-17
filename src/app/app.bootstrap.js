@@ -17,10 +17,13 @@ const onStartTransitionHandler = (transition) => {
 };
 
 const Bootstrap = ($transitions, Authentication) => {
-  'ngInject';
 
   $transitions
     .onStart({ to: '**' }, onStartTransitionHandler);
 };
+
+Bootstrap.$inject = [
+  '$transitions', 'Authentication'
+];
 
 export default Bootstrap;
