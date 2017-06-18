@@ -1,0 +1,13 @@
+<article>
+  <h1>{{ $ctrl.title }}</h1>
+  <form method="POST" action='/register'>
+    <label>Username:</label>
+    <input type="text" name="username" /><br>
+    <label>Password:</label>
+    <input type="password" name="password" /><br>
+    <label>Email:</label>
+    <input type="email" name="email" /><br>
+    <input type="submit" value="Register" />
+  </form>
+  <hr>{{ $ctrl.message }}
+</article>

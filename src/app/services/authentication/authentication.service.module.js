@@ -45,8 +45,21 @@ class Authentication {
 
     return deferred.promise;
   }
-  register() {
+  register(username, password) {
     console.log(this);
+    const deferred = $q.deferred();
+
+    this.$http.post('/user/register', { username, password })
+      .then(getData)
+      .then((data) => {
+        if (data.status && data.status === true) {
+          deferred.resolve(data.status);
+        }
+        deferred.reject(data.status);
+      })
+      .catch(data => deferred.reject(data));
+
+    return deferred.promise;
   }
   getUserStatus() {
     return this.$http.get('/data/db.json')

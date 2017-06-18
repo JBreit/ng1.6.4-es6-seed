@@ -16,7 +16,7 @@ const Config = ($stateProvider, $urlRouterProvider) => {
 
 Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-const homeModule = angular.module('home', [uiRouter,])
+const homeModule = angular.module('home', [uiRouter])
   .config(Config)
   .component('home', homeComponent)
   .name;

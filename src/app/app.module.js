@@ -16,6 +16,5 @@ angular.module('app', [uiRouter, Common, Components, Services])
   .run(Bootstrap);
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  console.log(event);
   angular.bootstrap(document, ['app']);
 });

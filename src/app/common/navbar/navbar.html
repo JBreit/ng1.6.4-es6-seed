@@ -1,5 +1,19 @@
 <nav class="navbar">
-  <ul class="nav-list">
+  <ul class="nav-list" ng-if="!$ctrl.isAuthenticated()">
+    <li class="nav-item" ui-sref-active="active">
+      <a class="nav-link" ui-sref="login">
+        <i class="fa fa-id-card fa-lg nav-icon"></i>
+        <span class="nav-text"> login</span>
+      </a>
+    </li>
+    <li class="nav-item" ui-sref-active="active">
+      <a class="nav-link" ui-sref="register">
+        <i class="fa fa-id-card fa-lg nav-icon"></i>
+        <span class="nav-text"> Register</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="nav-list" ng-if="$ctrl.isAuthenticated()">
     <li class="nav-item" ui-sref-active="active">
       <a class="nav-link" ui-sref="home">
         <i class="fa fa-home fa-lg nav-icon"></i>
